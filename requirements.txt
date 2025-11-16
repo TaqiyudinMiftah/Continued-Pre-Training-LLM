@@ -1,0 +1,9 @@
+transformers>=4.44.0
+accelerate>=0.34.0
+peft>=0.11.0
+datasets>=3.0.0
+bitsandbytes>=0.43.0
+sentencepiece>=0.2.0
+pyarrow==19.0.0
+python-dotenv>=1.0.1
+wandb>=0.15.4
