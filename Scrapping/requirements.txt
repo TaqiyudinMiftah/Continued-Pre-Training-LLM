@@ -1,0 +1,10 @@
+playwright
+beautifulsoup4
+lxml
+html5lib
+tqdm
+nest_asyncio
+deep-translator
+simhash
+langdetect
+taskipy

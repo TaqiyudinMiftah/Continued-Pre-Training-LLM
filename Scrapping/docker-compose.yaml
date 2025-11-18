@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  scraper:
+    build: .
+    container_name: scraping_bot
+    volumes:
+      # Mapping folder 'data' di host (Windows) ke '/app/data' di container
+      # Hasil scraping akan muncul di folder 'data' di komputer Anda
+      - ./data:/app/data
+    environment:
+      # Mengatur path sesuai yang kita edit di Langkah 1
+      - OUTPUT_DIR=data/page
+      - INPUT_DIR_PAGE=data/page
+      - OUTPUT_CSV_LINK=data/url/link.csv
+      - INPUT_CSV_LINK=data/url/link.csv
+      - OUTPUT_TXT_RESULT=data/results/cpt_ready.txt
+    # Opsi ini kadang dibutuhkan untuk Playwright agar shared memory cukup
+    shm_size: '2gb'
