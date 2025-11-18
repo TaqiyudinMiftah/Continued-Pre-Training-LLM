@@ -1,4 +1,4 @@
-playwright
+playwright==1.48.0
 beautifulsoup4
 lxml
 html5lib
@@ -7,4 +7,3 @@ nest_asyncio
 deep-translator
 simhash
 langdetect
-taskipy

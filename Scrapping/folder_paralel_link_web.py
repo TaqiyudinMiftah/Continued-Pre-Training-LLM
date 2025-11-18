@@ -136,7 +136,7 @@ async def open_urls_and_extract(urls):
     async with async_playwright() as pw:
 
         # Headless = False → lebih aman dari bot detection
-        browser = await pw.chromium.launch(headless=False)
+        browser = await pw.chromium.launch(headless=True)
 
         async def worker(idx, raw_url):
             ua = random.choice(UA_POOL)

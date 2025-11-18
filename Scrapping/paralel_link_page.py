@@ -207,4 +207,4 @@ if __name__ == "__main__":
             keywords.append(f"{kw} {d}")
         
     # jalankan paralel dengan batas MAX_CONCURRENCY
-    asyncio.run(run_keywords_parallel(keywords, headless=False))
+    asyncio.run(run_keywords_parallel(keywords, headless=True))

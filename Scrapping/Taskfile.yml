@@ -1,25 +1,24 @@
 version: '3'
 
 tasks:
-
   paralel_link_page:
-    desc: Menjalankan script paralel_link_page.py
+    desc: Menjalankan script scraping halaman Bing
     cmds:
       - python paralel_link_page.py
 
   folder_paralel_link_web:
-    desc: Menjalankan script folder_paralel_link_web.py
+    desc: Mengambil link dari hasil halaman
     cmds:
       - python folder_paralel_link_web.py
 
   paralel_elemen_html:
-    desc: Menjalankan script paralel_elemen_html.py
+    desc: Download konten HTML dari link
     cmds:
       - python paralel_elemen_html.py
 
   run:
-    desc: Menjalankan semua script secara beruntun (1 → 2 → 3)
-    deps:
-      - paralel_link_page
-      - folder_paralel_link_web
-      - paralel_elemen_html
+    desc: Menjalankan semua script secara BERURUTAN
+    cmds:  # <--- GANTI DARI 'deps' MENJADI 'cmds'
+      - task: paralel_link_page
+      - task: folder_paralel_link_web
+      - task: paralel_elemen_html
