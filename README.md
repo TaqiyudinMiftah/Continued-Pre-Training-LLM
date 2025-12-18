@@ -2,7 +2,7 @@
 
 ## 🧠 Continued Pre-training of Large Language Models
 
-This repository contains research code and experiments focused on **continued pre-training** of transformer-based language models.
+This repository contains research code and experiments focused on **continued pre-training** of transformer-based language model.
 The objective is to enhance model performance on **domain-specific data** while maintaining general language understanding.
 
 ---
